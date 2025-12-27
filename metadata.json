@@ -1,0 +1,8 @@
+{
+  "name": "Copy of 簡單帳本",
+  "description": "具備 AI 收據辨識、多帳戶管理及視覺化分析的智慧記帳軟體。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

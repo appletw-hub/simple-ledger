@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Account, Transaction, TransactionType, ReceiptData, RecurringTransaction, Frequency } from './types';
 import { INITIAL_ACCOUNTS, EXPENSE_CATEGORIES, INCOME_CATEGORIES, TRANSFER_CATEGORY, PRESET_BANKS } from './constants';
@@ -601,7 +602,7 @@ export default function App() {
   const sortedTransactions = useMemo(() => {
     const data = [...filteredTransactions];
     data.sort((a, b) => {
-      if (sortConfig.key === 'date') return sortConfig.direction === 'asc' ? new Date(a.date).getTime() - new Date(b.date).getTime() : new Date(b.date).getTime() - new Date(a.date).getTime();
+      if (sortConfig.key === 'date') return sortConfig.direction === 'asc' ? new Date(a.date).getTime() - new Date(a.date).getTime() : new Date(b.date).getTime() - new Date(a.date).getTime();
       return sortConfig.direction === 'asc' ? a.amount - b.amount : b.amount - a.amount;
     });
     return data;
@@ -1015,7 +1016,7 @@ export default function App() {
              <div className="pb-24 pt-4 px-1">
                 <div className="px-1 mb-6">
                     <div className="bg-gradient-to-br from-primary to-primary/70 rounded-3xl p-6 text-white shadow-xl shadow-primary/20">
-                    <div className="text-sm opacity-80 mb-1">資產流量</div>
+                    <div className="text-sm opacity-80 mb-1">資金流量</div>
                     <div className="text-4xl font-bold">${new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(Number(totalBalance))}</div>
                     </div>
                 </div>
